@@ -18,5 +18,10 @@ export default defineConfig(({ mode }) => {
     cesiumToken: process.env.CESIUM_ION_TOKEN,
     host: process.env.HOST,
     port: process.env.PORT,
+    // AgriEye is the default page; the original console stays at /gev.html.
+    pages: {
+      agrieye: fileURLToPath(new URL('../../index.html', import.meta.url)),
+      gev: fileURLToPath(new URL('../../gev.html', import.meta.url)),
+    },
   });
 });

@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const SRC_ROOT = fileURLToPath(new URL('.', import.meta.url));
 const REPO_ROOT = path.resolve(SRC_ROOT, '..');
-const INDEX_HTML = path.join(REPO_ROOT, 'index.html');
+const INDEX_HTML = path.join(REPO_ROOT, 'gev.html');
 
 /** The glyph written as element text: `<span class="material-symbols-outlined">radar</span>`. */
 const SPAN_TEXT =

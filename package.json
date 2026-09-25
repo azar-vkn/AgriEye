@@ -2,7 +2,7 @@
   "name": "gods-eye-view",
   "private": true,
   "version": "0.1.1",
-  "description": "A real-time intelligence console for planet Earth \u2014 photorealistic 3D globe, live aircraft/ships/satellites/earthquakes/CCTV, and hands-free voice control. Runs in a browser.",
+  "description": "AgriEye \u2014 spatial intelligence for Indian agriculture on a 3D globe (open weather, satellite NDVI and boundary data; explainable risk indicators), built on the God's Eye View real-time intelligence console.",
   "type": "module",
   "license": "MIT",
   "author": "Bilawal Sidhu",

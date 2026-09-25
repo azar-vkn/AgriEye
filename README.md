@@ -1,3 +1,31 @@
+# 🌾 AgriEye — Spatial Intelligence for Indian Agriculture
+
+**See the farm. Understand the risk. Act earlier.**
+
+AgriEye turns free, open weather, satellite and geographic data into
+transparent agricultural indicators — water stress, possible crop stress,
+heat, climate risk and solar-irrigation opportunity — on a cinematic 3D globe
+of India that you can question in plain language. Software only, no API keys.
+
+```bash
+npm install
+npm run dev   # AgriEye at http://localhost:4173/ · original console at /gev.html
+```
+
+- Data: Open-Meteo (weather, model soil moisture, radiation, ET₀) · NASA
+  MODIS NDVI via GIBS · datameet Survey of India / Census 2011 boundaries ·
+  Esri / Copernicus Sentinel-2 cloudless / OpenStreetMap basemaps.
+- Every value shows its source, freshness (FORECAST, NEAR-REAL-TIME, PERIODIC,
+  STATIC or DEMO) and timestamp; indicators are deterministic with visible
+  factor weights.
+
+Full documentation, demo script and methodology: **[docs/AGRIEYE.md](docs/AGRIEYE.md)**.
+
+AgriEye is built on the open-source God's Eye View project, whose original
+README follows.
+
+---
+
 <div align="center">
 
 # 🌐 God's Eye View

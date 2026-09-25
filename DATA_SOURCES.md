@@ -192,3 +192,13 @@ Douglas-Peucker simplification, 6-decimal rounding).
 ## In-app attribution
 
 The required Google Maps / Cesium credit renders on the on-globe credit line (`#cesium-credits`, bottom-left) and must stay visible — including in clean-view and recording modes (the whole line, logo + "Google Maps" + the "Data attribution" link, stays on screen; only the GEV panels/HUD fade). The layer-specific credits (adsb.lol, TeleGeography, OSM datacenters/dams/roads, NASA FIRMS, CelesTrak, USGS, City of Austin, Fintraffic, GBFS, Radio Browser, OpenSky, AISStream) are registered into the expandable **"Data attribution"** popover on that credit line via `viewer.creditDisplay.addStaticCredit(new Cesium.Credit(html, /* showOnScreen */ false))` — see `src/data/dataCredits.js`. When you add a new data source, add its license and attribution to this file **and** append an entry to `DATA_CREDITS` in `src/data/dataCredits.js` so it surfaces in the app.
+
+## AgriEye (agriculture globe at `/`)
+
+| Source | Use | Licence / terms |
+| --- | --- | --- |
+| [Open-Meteo](https://open-meteo.com/) forecast API | Weather, rain probability, past 30-day rain, 7-day forecast, ET₀, shortwave radiation, model soil moisture (3–27 cm) at district centroids | CC BY 4.0; free non-commercial API |
+| [NASA GIBS](https://earthdata.nasa.gov/gibs) — MODIS_Terra_NDVI_8Day | District-mean NDVI decoded from the published colormap; optional imagery overlay | NASA open data; attribution requested |
+| [datameet/maps](https://github.com/datameet/maps) | State outlines (Survey of India) and Census 2011 districts, simplified in `public/agrieye/geo` | CC BY 2.5 India |
+| [Sentinel-2 cloudless 2023 by EOX](https://s2maps.eu) | Optional basemap (contains modified Copernicus Sentinel data) | CC BY-NC-SA 4.0 |
+| `public/agrieye/demo/tamil-nadu.json` | Demo mode: archived snapshot of the Open-Meteo and GIBS responses above, labelled with its capture date | As above |

@@ -30,7 +30,7 @@ const TESTS = ['src/firstRunExperience.test.mjs', 'src/standalone/startupChrome.
 const FILES = {
   keyboard: path.join(ROOT, 'src', 'ui', 'surfaceKeyboard.js'),
   module: path.join(ROOT, 'src', 'firstRunExperience.js'),
-  html: path.join(ROOT, 'index.html'),
+  html: path.join(ROOT, 'gev.html'),
   css: path.join(ROOT, 'style.css'),
   voiceInstructions: path.join(ROOT, 'server/providers/openai/instructions.js'),
   voiceTools: path.join(ROOT, 'server/providers/openai/tools.js'),

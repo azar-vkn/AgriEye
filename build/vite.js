@@ -9,6 +9,7 @@ export function createBrowserViteConfig({
   cesiumToken,
   host = 'localhost',
   port = 4173,
+  pages,
 } = {}) {
   return {
     plugins: [cesium(), applicationHtmlPlugin(), ...plugins],
@@ -33,6 +34,10 @@ export function createBrowserViteConfig({
       'import.meta.env.GOOGLE_MAPS_API_KEY': JSON.stringify(googleApiKey),
       'import.meta.env.CESIUM_ION_TOKEN': JSON.stringify(cesiumToken),
     },
-    build: { chunkSizeWarningLimit: 1500 },
+    build: {
+      chunkSizeWarningLimit: 1500,
+      // Multi-page builds (AgriEye at /, the original console at /gev.html).
+      ...(pages ? { rollupOptions: { input: pages } } : {}),
+    },
   };
 }
